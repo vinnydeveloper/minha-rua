@@ -6,7 +6,8 @@ body{
 }
 
 .container {
-    width: 40%;
+    max-width: 900px;
+    width: 100%;
     margin: 5% auto;
     background: #654a90;
     
@@ -15,8 +16,10 @@ body{
 .truck{
     width: 100%;
     background-image: url(../img/truck.gif);
-    background-size: 100%;
+    background-size: contain;
     height: 280px;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .inputs{
