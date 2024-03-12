@@ -1,4 +1,5 @@
 const inputCep = document.querySelector("#cep");
+const btnBuscar = document.querySelector("#buscar");
 const inputRua = document.querySelector("#rua");
 const inputComplemento = document.querySelector("#complemento");
 const inputBairro = document.querySelector("#bairro");
@@ -6,7 +7,8 @@ const inputUF = document.querySelector("#UF");
 
 const BASE_URL = "https://brasilapi.com.br/api";
 
-inputCep.onkeyup = async (evento) => {
+
+async function getCep(evento) {
   //verificando se o cep cumpriu os 8 digitos
   if (inputCep.value.length < 8) {
     return;
@@ -26,4 +28,7 @@ inputCep.onkeyup = async (evento) => {
 
   console.log(conteudoResposta);
   // alert("Cep completo: " + inputCep.value);
-};
+}
+
+inputCep.onkeyup = getCep
+btnBuscar.onclick = getCep
